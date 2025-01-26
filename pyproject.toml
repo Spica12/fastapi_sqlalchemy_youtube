@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.13"
 fastapi = "^0.115.7"
 sqlalchemy = {extras = ["asyncio"], version = "^2.0.37"}
+aiosqlite = "^0.20.0"
 
 
 [build-system]
