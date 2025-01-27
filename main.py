@@ -3,15 +3,11 @@ import uvicorn
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 
-from core.models import Base, db_helper
 from core.config import settings
 from app_v1 import router as router_v1
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Load the ML model
-    async with db_helper.engine.begin() as conn:
-        await conn.run_sync(Base.metadata.create_all)
 
     yield
 
