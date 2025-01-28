@@ -28,3 +28,5 @@ alembic revision --autogenerate -m "create_products_table"
 
 alembic upgrade head
 ```
+
+## Lesson 4
